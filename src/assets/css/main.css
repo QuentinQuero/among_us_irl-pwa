@@ -1,10 +1,10 @@
 html,
-#app {
+#app,
+.defaultLayout {
     background-color: dimgrey;
 }
 
-.signUp,
-.signIn {
+.offline{
     border-radius: 5%;
     background-color: white;
     margin-top: 20vh;

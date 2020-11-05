@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import LoginPage from "@/components/unloggedModules/Pages/LoginPage";
 import SignUpPage from "@/components/unloggedModules/Pages/SignUpPage";
 import HomePage from "@/components/homeModule/Pages/HomePage";
+import online from "@/layouts/online";
+import offline from "@/layouts/offline";
 
 Vue.use(Router);
 
@@ -19,6 +21,7 @@ let router = new Router ({
             name: 'login',
             component: LoginPage,
             meta: {
+                layout: offline,
                 guest: true
             }
         },
@@ -27,6 +30,7 @@ let router = new Router ({
             name: 'signup',
             component: SignUpPage,
             meta: {
+                layout: offline,
                 guest: true
             }
         },
@@ -35,6 +39,7 @@ let router = new Router ({
             name: 'home',
             component: HomePage,
             meta: {
+                layout: online,
                 requiresAuth: true
             }
         }

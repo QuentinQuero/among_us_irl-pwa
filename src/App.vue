@@ -1,13 +1,21 @@
 <template>
   <div id="app">
-    <router-view/>
+    <component :is="layout">
+      <router-view/>
+    </component>
   </div>
 </template>
 
 <script>
 
 export default {
-  name: 'App'
+  name: 'App',
+  computed: {
+    layout() {
+      console.log(this.$route.meta.layout);
+      return (this.$route.meta.layout.name || 'offline') + '-layout'
+    }
+  }
 }
 </script>
 
