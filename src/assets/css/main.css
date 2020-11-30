@@ -1,0 +1,14 @@
+html,
+#app,
+.defaultLayout {
+    background-color: dimgrey;
+}
+
+.offline{
+    border-radius: 5%;
+    background-color: white;
+    margin-top: 20vh;
+    width: 90vw;
+    margin-left: 5vw;
+    padding: 3vh 3vw;
+}
