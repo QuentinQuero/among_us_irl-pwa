@@ -54,7 +54,7 @@ export default {
       gameServices.joinGame(this.gameCode).then((response) => {
         console.log(response);
         if (response.status === 'error') {
-          this.alertMessage = 'You are already in game';
+          this.alertMessage = response.message;
           this.alertType = 'danger'
           this.dismissCountDown = this.dismissSecs;
         }
