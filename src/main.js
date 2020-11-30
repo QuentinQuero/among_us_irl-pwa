@@ -8,10 +8,10 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 // Import and define layouts
-import defaultLayout from "@/layouts/online";
+import onlineLayout from "@/layouts/online";
 import offlineLayout from "@/layouts/offline";
 
-Vue.component('default-layout', defaultLayout);
+Vue.component('online-layout', onlineLayout);
 Vue.component('offline-layout', offlineLayout);
 
 Vue.config.productionTip = false

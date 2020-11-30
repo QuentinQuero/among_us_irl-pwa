@@ -12,8 +12,17 @@ export default {
   name: 'App',
   computed: {
     layout() {
-      console.log(this.$route.meta.layout);
       return (this.$route.meta.layout.name || 'offline') + '-layout'
+    }
+  },
+  created() {
+    this.$root.$on('session-expired', this.unloggedUser);
+    this.$root.$on('user-logout', this.unloggedUser);
+  },
+  methods: {
+    unloggedUser () {
+      localStorage.removeItem('jwt');
+      this.$router.push('/');
     }
   }
 }
