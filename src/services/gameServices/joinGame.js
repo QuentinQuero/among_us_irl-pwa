@@ -2,7 +2,7 @@
 const axios = require('axios');
 const config = require('@/config/default.json');
 
-const joinGame = function (gameCode) {
+const joinGame = function (gameCode, pseudo) {
     return new Promise((resolve, reject) => {
         axios({
             method: 'get',
@@ -11,7 +11,8 @@ const joinGame = function (gameCode) {
                 authorization: 'Bearer ' + localStorage.getItem('jwt')
             },
             params: {
-                accessCode: gameCode
+                accessCode: gameCode,
+                pseudo: pseudo
             }
         }).then((response) => {
             // TODO add here a test

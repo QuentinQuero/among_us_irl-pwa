@@ -4,18 +4,25 @@
       <h4>Join Game</h4>
       <div class="form-group">
         <input
+            v-model="pseudo"
+            placeholder="Pseudo"
+            class="form-control form-control-lg input-join"
+        />
+      </div>
+      <div class="form-group">
+        <input
             v-model="gameCode"
             placeholder="Game code"
             class="form-control form-control-lg input-join"
         />
-        <button
+      </div>
+      <button
           v-on:click="joinGame"
           type="button"
           class="btn btn-outline-primary btn-lg btn-block col-12"
-        >
-          Join Game
-        </button>
-      </div>
+      >
+        Join Game
+      </button>
     </form>
     <b-alert
         style="margin-top: 3em"
@@ -47,11 +54,12 @@ export default {
       alertType: '',
       dismissSecs: 10,
       dismissCountDown: 0,
+      pseudo: ''
     }
   },
   methods: {
     joinGame () {
-      gameServices.joinGame(this.gameCode).then((response) => {
+      gameServices.joinGame(this.gameCode, this.pseudo).then((response) => {
         console.log(response);
         if (response.status === 'error') {
           this.alertMessage = response.message;
