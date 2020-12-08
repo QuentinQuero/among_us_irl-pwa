@@ -60,11 +60,14 @@ export default {
   methods: {
     joinGame () {
       gameServices.joinGame(this.gameCode, this.pseudo).then((response) => {
-        console.log(response);
         if (response.status === 'error') {
           this.alertMessage = response.message;
           this.alertType = 'danger'
           this.dismissCountDown = this.dismissSecs;
+        } else {
+          sessionStorage.setItem('player', response.player);
+          sessionStorage.setItem('game', response.game);
+          this.$router.push('home')
         }
       }).catch(() => {
         this.$root.$emit('session-expired')

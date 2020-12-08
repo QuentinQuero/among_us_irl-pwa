@@ -21,7 +21,7 @@ export default {
   },
   methods: {
     unloggedUser () {
-      localStorage.removeItem('jwt');
+      sessionStorage.removeItem('jwt');
       this.$router.push('/');
     }
   }

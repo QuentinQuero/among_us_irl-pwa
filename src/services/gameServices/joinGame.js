@@ -8,7 +8,7 @@ const joinGame = function (gameCode, pseudo) {
             method: 'get',
             url: `${config.backUrl}/games/join`,
             headers: {
-                authorization: 'Bearer ' + localStorage.getItem('jwt')
+                authorization: 'Bearer ' + sessionStorage.getItem('jwt')
             },
             params: {
                 accessCode: gameCode,
