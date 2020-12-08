@@ -5,6 +5,9 @@ import SignUpPage from "@/components/unloggedModules/Pages/SignUpPage";
 import HomePage from "@/components/homeModule/Pages/HomePage";
 import online from "@/layouts/online";
 import offline from "@/layouts/offline";
+import SalonPage from "@/components/homeModule/Pages/SalonPage";
+import InGamePage from "@/components/homeModule/Pages/InGamePage";
+import inGame from "@/layouts/inGame";
 
 Vue.use(Router);
 
@@ -42,19 +45,37 @@ let router = new Router ({
                 layout: online,
                 requiresAuth: true
             }
+        },
+        {
+            path: '/salon',
+            name: 'salon',
+            component: SalonPage,
+            meta: {
+                layout: inGame,
+                requiresAuth: true
+            }
+        },
+        {
+            path: '/inGame',
+            name: 'inGame',
+            component: InGamePage,
+            meta: {
+                layout: inGame,
+                requiresAuth: true
+            }
         }
     ]
 });
 
 router.beforeEach((to, from, next) => {
     if(to.matched.some(record => record.meta.requiresAuth)) {
-        if (localStorage.getItem('jwt') == null) {
+        if (sessionStorage.getItem('jwt') == null) {
             next({
                 path: '/login',
                 params: { nextUrl: to.fullPath }
             })
         } else {
-            let user = JSON.parse(localStorage.getItem('user'))
+            let user = JSON.parse(sessionStorage.getItem('user'))
             if(to.matched.some(record => record.meta.is_admin)) {
                 if(user.is_admin === 1){
                     next()
@@ -67,7 +88,7 @@ router.beforeEach((to, from, next) => {
             }
         }
     } else if(to.matched.some(record => record.meta.guest)) {
-        if(localStorage.getItem('jwt') == null){
+        if(sessionStorage.getItem('jwt') == null){
             next()
         }
         else{
