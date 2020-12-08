@@ -1,5 +1,6 @@
 'use strict';
 
 module.exports = {
-    'joinGame': require('./joinGame')
+    'joinGame': require('./joinGame'),
+    'getGameDetails': require('./getGameDetails')
 }
