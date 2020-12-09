@@ -4,7 +4,7 @@
       :placeholder="placeholder"
       v-model="value"
     />
-    <b-button variant="primary" @click="validate">Validate</b-button>
+    <b-button variant="primary" @click="validate">{{ $t('actions.validate') }}</b-button>
   </div>
 </template>
 

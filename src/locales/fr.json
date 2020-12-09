@@ -1,0 +1,57 @@
+{
+  "pages": {
+    "title": {
+      "sign_in": "Connexion",
+      "sign_up": "Créer un compte",
+      "join_game": "Rejoindre une partie",
+      "game_configurations": "Configuration de la partie"
+    }
+  },
+  "forms": {
+    "email_address": "Adresse mail",
+    "password": "Mot de passe",
+    "confirm_password": "Confirmation du mot de passe",
+    "pseudo": "Pseudo",
+    "game_code": "Code de la partie"
+  },
+  "actions": {
+    "sign_in": "Se connecter",
+    "sign_up": "Créer un compte",
+    "validate": "Valider",
+    "join_game": "Rejoindre",
+    "log_out": "Déconnexion",
+    "games": "Voir les parties",
+    "leave_game": "Quitter la partie",
+    "cancel": "Annuler"
+  },
+  "errors": {
+    "invalid_credentials": "Informations de connexions incorrectes",
+    "email_used": "Adresse mail déjà utilisée",
+    "account_creation": "Erreur dans la création du compte",
+    "game_not_found": "Partie non trouvée",
+    "game_unavailable": "Partie indisponible",
+    "game_full": "Partie pleine",
+    "already_in_game": "Vous avez déjà rejoins une partie"
+  },
+  "messages": {
+    "already_registered": "Déjà un compte,",
+    "sign_in": "se connecter ",
+    "account_created": "Compte crée",
+    "enter_missions_code": "Code de mission",
+    "enter_players_pseudo": "Pseudo du joueur"
+  },
+  "configurations": {
+    "cooldown":"Cooldown de l'imposter",
+    "players_number": "Nombre de joueurs",
+    "number_short_missions": "Nombre de missions courtes",
+    "number_normal_missions": "Nombre de missions normales",
+    "number_long_missions": "Nombre de missions longues",
+    "number_imposter": "Nombre d'imposteurs",
+    "name": "Nom de la configuration"
+  },
+  "tabs": {
+    "configurations": "Configurations",
+    "players": "Joueurs",
+    "missions": "Missions"
+  }
+}

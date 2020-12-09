@@ -1,6 +1,8 @@
 <template>
- <div class="offline">
-   <slot/>
+ <div class="offlinePage">
+   <div class="offline">
+     <slot/>
+   </div>
  </div>
 </template>
 

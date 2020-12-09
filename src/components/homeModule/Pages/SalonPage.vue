@@ -1,18 +1,18 @@
 <template>
-  <div class="salonPage">
+  <div class="salonPage" v-if="game !== null">
     <b-tabs pills justified>
-      <b-tab title="Configuration" active>
+      <b-tab :title="$t('tabs.configurations')" active>
         <game-configurations-component
             :game="game"
         />
       </b-tab>
-      <b-tab title="Players">
+      <b-tab :title="$t('tabs.players')">
         <player-list-component
             :game="game"
         />
       </b-tab>
     </b-tabs>
-    <b-button variant="danger">Leave Game</b-button>
+    <b-button variant="danger">{{ $t('actions.leave_game') }}</b-button>
   </div>
 </template>
 

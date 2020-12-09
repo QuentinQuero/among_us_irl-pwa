@@ -5,7 +5,7 @@
           style="width: 50vw; margin-bottom: 2vh"
       ></qr-code-scaner>
       <input-and-button
-          placeholder="Player pseudo here"
+          :placeholder="$t('messages.enter_players_pseudo')"
           v-on:send="reportPlayer($event)"
       ></input-and-button>
     </b-container>

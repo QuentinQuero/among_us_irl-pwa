@@ -5,13 +5,13 @@
       variant="ligth"
       @click="logout"
     >
-      Logout
+      {{ $t('actions.log_out') }}
     </b-button>
     <b-button
       size="sm"
       variant="light"
     >
-      Games
+      {{ $t('actions.games') }}
     </b-button>
   </div>
 </template>

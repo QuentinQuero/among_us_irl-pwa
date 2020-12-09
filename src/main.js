@@ -12,6 +12,7 @@ import VueQrcodeReader from "vue-qrcode-reader";
 import onlineLayout from "@/layouts/online";
 import offlineLayout from "@/layouts/offline";
 import inGameLayout from "@/layouts/inGame";
+import i18n from './i18n'
 
 Vue.component('online-layout', onlineLayout);
 Vue.component('offline-layout', offlineLayout);
@@ -22,9 +23,9 @@ Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
 Vue.use(VueQrcodeReader);
-
 new Vue({
   render: h => h(App),
+  i18n,
   router
 }).$mount('#app')
 
