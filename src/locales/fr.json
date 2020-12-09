@@ -4,7 +4,8 @@
       "sign_in": "Connexion",
       "sign_up": "Créer un compte",
       "join_game": "Rejoindre une partie",
-      "game_configurations": "Configuration de la partie"
+      "game_configurations": "Configuration de la partie",
+      "game_players_list": "Liste des joueurs de la partie"
     }
   },
   "forms": {

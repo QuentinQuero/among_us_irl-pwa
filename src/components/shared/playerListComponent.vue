@@ -1,7 +1,7 @@
 <template>
   <b-card
     class="gamePlayers"
-    title="Game player list"
+    :title="$t('pages.title.game_players_list')"
   >
     <b-card-text>
       <ul class="playerList">
