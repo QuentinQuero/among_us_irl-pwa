@@ -4,7 +4,7 @@
       style="width: 50vw; margin-bottom: 2vh"
     ></qr-code-scaner>
     <input-and-button
-      placeholder="Enter mission code"
+      :placeholder="$t('messages.enter_missions_code')"
       v-on:send="codeSend($event)"
     ></input-and-button>
   </b-container>

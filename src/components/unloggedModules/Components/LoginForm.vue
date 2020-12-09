@@ -2,10 +2,10 @@
   <div>
     <div class="vue-template">
       <form>
-        <h3>Sign in</h3>
+        <h3>{{$t('pages.title.sign_in')}}</h3>
         <!-- Form group for email address -->
         <div class="form-group">
-          <label>Email address</label>
+          <label>{{ $t('forms.email_address') }}</label>
           <input
               v-model="email"
               type="email"
@@ -15,7 +15,7 @@
 
         <!-- Form group for Password -->
         <div class="form-group">
-          <label>Password</label>
+          <label>{{ $t('forms.password') }}</label>
           <input
               v-model="password"
               type="password"
@@ -24,20 +24,20 @@
         </div>
         <!-- Button line -->
         <div class="row">
-          <button
+          <b-button
               v-on:click="signIn"
               type="button"
-              class="btn btn-dark btn-lg btn-block col-4"
+              variant="primary"
           >
-            Sign In
-          </button>
-          <button
+            {{ $t('actions.sign_in') }}
+          </b-button>
+          <b-button
               v-on:click="signUp"
               type="button"
-              class="btn btn-outline-primary btn-lg btn-block col-4"
+              variant="secondary"
           >
-            Sign Up
-          </button>
+            {{ $t('actions.sign_up') }}
+          </b-button>
         </div>
       </form>
     </div>
@@ -49,7 +49,7 @@
         @dismissed="dismissCountDown=0"
         @dismiss-count-down="countDownChanged"
     >
-      <h4>Invalid credentials</h4>
+      <h6>{{ $t('errors.invalid_credentials') }}</h6>
       <b-progress
           variant="warning"
           :max="dismissSecs"

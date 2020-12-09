@@ -1,17 +1,17 @@
 <template>
   <b-card
       class="gameConfigurations"
-      title="Game configurations"
+      :title="$t('pages.title.game_configurations')"
   >
     <b-card-text>
       <ul class="configList">
-        <li>Cooldow: {{game.configurations.cooldown}}</li>
-        <li>Players number: {{game.configurations.nbPlayers}}</li>
-        <li>Number short missions: {{game.configurations.nbShortMissions}}</li>
-        <li>Number normal missions: {{game.configurations.nbNormalMissions}}</li>
-        <li>Number Long missions: {{game.configurations.nbLongMissions}}</li>
-        <li>Number imposter: {{game.configurations.nbImposter}}</li>
-        <li>Name: {{game.configurations.name}}</li>
+        <li>{{ $t('configurations.name') }}: {{game.configurations.name}}</li>
+        <li>{{ $t('configurations.cooldown') }}: {{game.configurations.cooldown}}</li>
+        <li>{{ $t('configurations.players_number') }}: {{game.configurations.nbPlayers}}</li>
+        <li>{{ $t('configurations.number_short_missions') }}: {{game.configurations.nbShortMissions}}</li>
+        <li>{{ $t('configurations.number_normal_missions') }}: {{game.configurations.nbNormalMissions}}</li>
+        <li>{{ $t('configurations.number_long_missions') }}: {{game.configurations.nbLongMissions}}</li>
+        <li>{{ $t('configurations.number_imposter') }}: {{game.configurations.nbImposter}}</li>
       </ul>
     </b-card-text>
   </b-card>

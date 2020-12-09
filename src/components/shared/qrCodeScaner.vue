@@ -5,7 +5,7 @@
     </b-button>
     <div v-if="openCamera" class="qrcodeScanGroup">
       <qrcode-stream @decode="onDecode"/>
-      <b-button variant="danger" @click="openCamera = false">Cancel</b-button>
+      <b-button variant="danger" @click="openCamera = false">{{ $t('actions.cancel') }}</b-button>
     </div>
   </div>
 </template>

@@ -4,11 +4,17 @@ html,
     background-color: dimgrey;
 }
 
+.offlinePage{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .offline{
-    border-radius: 5%;
+    align-self: center;
+    border-radius: 5vh;
     background-color: white;
-    margin-top: 20vh;
     width: 90vw;
-    margin-left: 5vw;
-    padding: 3vh 3vw;
+    padding: 2vh 2vw;
 }

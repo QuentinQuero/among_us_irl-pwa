@@ -1,9 +1,9 @@
 <template>
   <b-tabs pills justified>
-    <b-tab title="Missions" active>
+    <b-tab :title="$t('tabs.missions')" active>
       <mission-tab-component/>
     </b-tab>
-    <b-tab title="Players">
+    <b-tab :title="$t('tabs.players')">
       <player-tap-component/>
     </b-tab>
   </b-tabs>

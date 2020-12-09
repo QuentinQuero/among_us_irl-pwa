@@ -1,28 +1,29 @@
 <template>
   <div class="vue-template">
     <form>
-      <h4>Join Game</h4>
+      <h4>{{ $t('pages.title.join_game') }}</h4>
       <div class="form-group">
         <input
             v-model="pseudo"
-            placeholder="Pseudo"
+            :placeholder="$t('forms.pseudo')"
             class="form-control form-control-lg input-join"
         />
       </div>
       <div class="form-group">
         <input
             v-model="gameCode"
-            placeholder="Game code"
+            :placeholder="$t('forms.game_code')"
             class="form-control form-control-lg input-join"
         />
       </div>
-      <button
+      <b-button
           v-on:click="joinGame"
           type="button"
-          class="btn btn-outline-primary btn-lg btn-block col-12"
+          variant="outline-primary col-12"
+          size="lg"
       >
-        Join Game
-      </button>
+        {{ $t('actions.join_game') }}
+      </b-button>
     </form>
     <b-alert
         style="margin-top: 3em"
@@ -32,7 +33,7 @@
         @dismissed="dismissCountDown=0"
         @dismiss-count-down="countDownChanged"
     >
-      <h5>{{alertMessage}}</h5>
+      <h5>{{ $t('errors.' + alertMessage) }}</h5>
       <b-progress
           :variant="alertType"
           :max="dismissSecs"
