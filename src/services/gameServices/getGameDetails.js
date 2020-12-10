@@ -7,7 +7,7 @@ const getGameDetails = function (gameId) {
     return new Promise((resolve, reject) => {
        axios({
            method: 'get',
-           url: `${config.backUrl}/games/${gameId}`,
+           url: `${config.backUrl}/games/get/${gameId}`,
            headers: {
                authorization: 'Bearer ' + sessionStorage.getItem('jwt')
            }

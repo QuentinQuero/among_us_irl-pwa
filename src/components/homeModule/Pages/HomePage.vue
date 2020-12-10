@@ -31,15 +31,12 @@ export default {
       // Rooting to game page
       switch (gameStatus) {
         case 'inGame':
-          console.log('in game');
           this.$router.push('inGame');
           break;
         case 'init':
-          console.log('init')
           this.$router.push('salon');
           break;
         default:
-          console.log('no game');
           sessionStorage.removeItem('gameStatus');
           sessionStorage.removeItem('player');
           sessionStorage.removeItem('gameId');
