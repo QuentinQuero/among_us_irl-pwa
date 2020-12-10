@@ -66,9 +66,9 @@ export default {
           this.alertType = 'danger'
           this.dismissCountDown = this.dismissSecs;
         } else {
-          sessionStorage.setItem('player', response.player);
+          sessionStorage.setItem('player', response.player._id);
           sessionStorage.setItem('game', response.game);
-          this.$router.push('home')
+          this.$router.push('/salon')
         }
       }).catch(() => {
         this.$root.$emit('session-expired')

@@ -12,7 +12,7 @@
         />
       </b-tab>
     </b-tabs>
-    <b-button variant="danger">{{ $t('actions.leave_game') }}</b-button>
+    <b-button variant="danger" @click="leaveGame">{{ $t('actions.leave_game') }}</b-button>
   </div>
 </template>
 
@@ -34,9 +34,20 @@ export default {
   methods: {
     loadData () {
       gameService.getGameDetails(sessionStorage.getItem('gameId')).then((response) => {
-        this.game = response.game
+        this.game = response.game;
       }).catch(() => {
-        this.$root.$emit('session-expired')
+        this.$root.$emit('session-expired');
+      })
+    },
+    leaveGame () {
+      gameService.leaveGame(sessionStorage.getItem('gameId'), sessionStorage.getItem('player')).then((response) => {
+        if (response.status === 'success') {
+          this.$router.push('/home');
+        } else {
+          console.log("error");
+        }
+      }).catch(() => {
+        this.$root.$emit('session-expired');
       })
     }
   }
